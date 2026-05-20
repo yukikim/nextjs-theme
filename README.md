@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nextjs-theme
 
-## Getting Started
+Astro から Next.js へ移行したデザインテーマです。Next.js App Router、Tailwind CSS v4、next/image に対応しています。
 
-First, run the development server:
+## セットアップ
+
+依存関係をインストールします。
+
+```bash
+npm install
+```
+
+開発サーバーを起動します。
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで http://localhost:3000 を開くと確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 利用コマンド
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+```
 
-## Learn More
+## 主な構成
 
-To learn more about Next.js, take a look at the following resources:
+- App Router 構成: src/app
+- 共通コンポーネント: src/components
+- テーマCSS: src/app/tailus.css
+- 画像アセット: public/images
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 移行内容
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Astro のページ構成を Next.js の App Router に移植
+- Layout、Header、Footer、Hero、Features、Stats、Testimonials、CallToAction、Blog を React コンポーネント化
+- 画像を next/image へ移行
+- 外部画像用に next.config.ts で remotePatterns を設定
 
-## Deploy on Vercel
+## 移行チェックリスト
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- npm run lint が通る
+- npm run build が通る
+- src 配下に img タグが残っていない
+- public/images のローカル画像が正しく表示される
+- 外部画像が next/image 経由で表示される
+- Header のモバイルメニューが開閉できる
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 次に確認するとよい項目
+
+- 実運用用の meta 情報の調整
+- リンク先のダミー URL の差し替え
+- 必要に応じたダークモード切り替えUIの追加
