@@ -37,7 +37,7 @@ export default function TopBackground({ imageUrl, startScrollY = 300, zIndex = -
 
     return (
         <div className={`fixed top-0 ${zIndex} min-h-screen w-full overflow-hidden bg-neutral-500`}>
-            <div className="absolute min-h-screen w-full bg-fixed bg-top-center bg-cover"
+            <div className="absolute min-h-screen w-full bg-top-center bg-center bg-cover"
                 style={{ backgroundImage: `url('/images/${imageUrl}')` }}
             >
                 <div
@@ -48,10 +48,10 @@ export default function TopBackground({ imageUrl, startScrollY = 300, zIndex = -
                     // }}
                 ></div>
             </div>
-            {/* <div className="absolute min-h-screen w-full backdrop-grayscale backdrop-brightness-[80%]"></div> */}
-            {/* <div className="absolute top-[-10%] left-[-10%] h-[500px] w-[500px] rounded-full bg-lime-700/80 blur-[80px] animate-orb [animation-delay:800ms]"></div>
+            <div className="absolute min-h-screen w-full backdrop-grayscale backdrop-brightness-[80%]"></div>
+            <div className="absolute top-[-10%] left-[-10%] h-[500px] w-[500px] rounded-full bg-lime-700/80 blur-[80px] animate-orb [animation-delay:800ms]"></div>
             <div className="absolute bottom-[10%] right-[25%] h-[400px] w-[400px] rounded-full bg-sky-300/70 blur-[100px] animate-orb [animation-delay:500ms]"></div>
-            <div className="absolute top-[24%] right-[10%] h-[300px] w-[300px] rounded-full bg-pink-100/60 blur-[80px] animate-orb [animation-delay:1200ms]"></div> */}
+            <div className="absolute top-[24%] right-[10%] h-[300px] w-[300px] rounded-full bg-pink-100/60 blur-[80px] animate-orb [animation-delay:1200ms]"></div>
         </div>
     )
 }
