@@ -10,13 +10,13 @@ export default function Stats() {
           <path fillRule="evenodd" d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z" clipRule="evenodd" />
         </svg>
 
-        <div className="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
+        <div className="space-y-6 justify-between text-on-tertiary md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
           <div className="md:5/12 lg:w-1/2">
             <Image src="/images/pie.svg" alt="image" width={960} height={720} className="w-full h-auto" />
           </div>
           <div className="md:7/12 lg:w-1/2">
-            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl dark:text-white">Nuxt development is carried out by passionate developers</h2>
-            <p className="my-8 text-gray-600 dark:text-gray-300">
+            <h2 className="text-3xl font-bold text-on-tertiary md:text-4xl dark:text-white">Nuxt development is carried out by passionate developers</h2>
+            <p className="my-8 text-on-tertiary dark:text-gray-300">
               Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
               <br />
               <br />
